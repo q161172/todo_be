@@ -14,6 +14,8 @@ app.use(cors({
   credentials: true
 }));
 
+app.options('*', cors());
+
 // Minimal request logger for debugging (removed verbose headers/body logs)
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
