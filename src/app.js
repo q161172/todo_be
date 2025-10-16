@@ -7,13 +7,13 @@ const app = express();
 
 app.use(cors({
   origin: [
-    'https://todo-fe-lac-pi.vercel.app'
+    'https://todo-fe-lac-pi.vercel.app',
+    'http://localhost:8080'
   ],
   credentials: true
 }));
 console.log(`fix cors`);
 
-app.options('*', cors());
 
 // Minimal request logger for debugging (removed verbose headers/body logs)
 app.use((req, res, next) => {
