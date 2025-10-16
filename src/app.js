@@ -6,10 +6,13 @@ import { errorHandler } from "./middlewares/error.middleware.js";
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:3000'],
+  origin: [
+    'http://localhost:8080',
+    'http://localhost:3000',
+    'https://todo-fe-lac-pi.vercel.app'
+  ],
   credentials: true
 }));
-app.use(express.json());
 
 // Minimal request logger for debugging (removed verbose headers/body logs)
 app.use((req, res, next) => {
