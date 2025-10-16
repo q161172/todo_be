@@ -13,7 +13,7 @@ app.use(cors({
   credentials: true
 }));
 console.log(`fix cors`);
-
+app.use(express.json());
 
 // Minimal request logger for debugging (removed verbose headers/body logs)
 app.use((req, res, next) => {
