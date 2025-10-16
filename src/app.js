@@ -11,7 +11,7 @@ app.use(cors({
   ],
   credentials: true
 }));
-
+console.log(`fix cors`)
 app.options('*', cors());
 
 // Minimal request logger for debugging (removed verbose headers/body logs)
